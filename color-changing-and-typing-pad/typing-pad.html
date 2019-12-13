@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+<head>
+  <style>
+    body{
+      background-color:white;
+
+    }
+    #ty{
+      position: absolute;
+  left: 671px;
+  top: 60px;
+  width: 249px;
+  height: 27px;
+  font-size: 23px;
+  border: none;
+    }
+    .row{
+      width: 348px;
+height: auto;
+margin-left: 619px;
+margin-top: 113px;
+    }
+    </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      $("#ty").keypress(function(n){
+        if(e.keycode==13){
+        var e=$("#ty").val();
+        $("#a").append("<li>+e+</li>");
+      }
+    });});
+      </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+    <input id="ty" type="text" placeholder="what need to be done?"/>
+    <ul class="list-group" id="a">
+
+      </ul>
+      </div>
+    </div>
+    </body>
+</html>

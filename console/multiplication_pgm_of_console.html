@@ -1,0 +1,92 @@
+<!DOCTYPE>
+<HTML>
+<head>
+<style>
+body{
+  background-color: yellow;
+}
+.m{
+  text-align: center;
+
+    background-color: green;
+    border-radius: 51px;
+    width: 234px;
+    height: 166px;
+    position: absolute;
+    top: 262px;
+    left: 575px;
+}
+#a{
+  text-align: center;
+height: 27px;
+width: 178px;
+margin-left: 28px;
+margin-top: 29px;
+}
+
+#f{
+
+}
+#s{
+margin-top: 17px;
+}
+#b{
+  text-align: center;
+position: absolute;
+top: 86px;
+left: 94px;
+}
+#d{
+  height: 20px;
+    width: 153px;
+
+    text-align: center;
+    position: absolute;
+    top: 141px;
+    left: 40px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <centre>
+    <div class="m">
+    <input style="margin-top: 20px;" id="f" type="text" placeholder="width"/>
+    <input id="s" type="text" placeholder="height"/>
+    <input id="b" type="button" onclick="fn()"value="submit"/>
+    <div id="a">
+
+    </div>
+    <div id="d">
+
+    </div>
+    
+  </div>
+  </centre>
+  </div>
+  <script>
+  function fn(){
+    num1 = document.getElementById("f").value;
+      num2 = document.getElementById("s").value;
+      document.getElementById("a").innerHTML = num1 * num2;
+      console.group();
+console.log(num1*num2);
+console.error(num1*num2);
+console.warn(num1*num2);
+var ans=num1*num2;
+console.groupEnd();
+console.table(["roman","randy","john cena"]);
+console.assert(!isNaN(ans), 'User entered non-numeric value');
+if (ans < 100) {
+    debugger;
+  }
+  try {
+    if(ans< 10)  throw "too small";
+  }
+  catch(v) {
+    d.innerHTML = "Output is " + v;
+  }
+  }
+  </script>
+</body>
+</html>
