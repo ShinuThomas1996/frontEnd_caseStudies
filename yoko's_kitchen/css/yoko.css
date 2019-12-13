@@ -1,0 +1,188 @@
+body{
+    background-image:url("../dark-wood.jpg");
+    background-repeat: no-repeat;
+    background-size:100%,100%;
+    font-family:'ubuntu',sans-serif;
+
+    }
+.main{
+      width: 940px;
+      margin: 40px auto 0px auto;
+      border: 2px solid #000000;
+      background-color: #ffffff;
+      height: 200%;
+      padding-bottom: -6%;
+     }
+.header{
+        width:940%
+        padding-bottom:8%;
+        }
+.img{
+     width:940%
+     padding-bottom:8%;
+     }
+ul {
+     list-style-type: none;
+     margin: -3px;
+     margin-left: 0px;
+     margin-right: 0px;
+     padding: 0px;
+     overflow: hidden;
+     background-color: grey;
+   }
+
+li {
+    float: left;
+   }
+
+li a {
+     display: block;
+     color: white;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     }
+
+li a:hover {
+           background-color: #111;
+           }
+.fs{
+    float: left;
+    width: 651px;
+    border-right: 1px solid #eeeeee;
+   }
+article{
+        clear: both;
+        overflow: auto;
+        width: 100%;
+}
+
+figure{
+      float: left;
+      width: 290px;
+      height: 220px;
+      padding: 5px;
+      margin: 20px;
+      border: 1px solid #eeeeee;
+      }
+figcaption{
+          font-size: 90%;
+          text-align: left;
+          }
+p{
+
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  h2{
+
+    font-family: georgia;
+    margin: 10px 0px 5px 0px;
+    padding: 0px;
+   }
+  h3{
+    font-family: georgia;
+    font-weight: normal;
+    margin: 0px 0px 10px 0px;
+    color: #de6581;
+  }
+  aside h2{
+           font-family: georgia;
+           padding 30px 0px 10px 0px;
+  }
+  aside section h2{
+                  font-family: georgia;
+                  }
+  .fs p{
+       font-family: georgia;
+       }
+  .c{
+     margin-left: 17px;
+     align-left:0px:
+    }
+aside section p{
+               font-family: georgia;
+              }
+  footer{
+        font-family: georgia;
+        font-size: 80%;
+        padding-bottom: 7px
+        padding-left: -195px;
+        padding-right: 775px;
+        padding-top: 12px;
+        clear: both;
+        color: #ffffff;
+        background-color: #aeaca8;
+        height: 29px;
+        width: 165px;
+       }
+  a{
+     font-family: georgia;
+     color:#de6581;
+     text-decoration:none;
+    }
+  .j{
+    font-family: georgia;
+    position: absolute;left:340px
+    position:absolute;top:242px;
+    margin-left: 340px;
+    }
+  .jj{
+    font-family: georgia;
+    position: absolute;left:340px
+    position:absolute;top:280px;
+    margin-left: 340px;
+  }
+  .pp{
+      font-family: georgia;
+      font-weight: normal;
+      position: absolute;left:340px
+      position:absolute;top:309px;
+      margin-left: 340px;
+     }
+  .s{
+    font-family: georgia;
+    position: absolute;left:340px
+    position:absolute;top:510px;
+    margin-left: 340px;
+   }
+  .ss{
+     font-family: georgia;
+     position: absolute;left:340px
+     position:absolute;top:547px;
+     margin-left: 340px;
+    }
+.ppp{
+     font-weight: normal;
+     position: absolute;left:340px
+     position:absolute;top:571px;
+     margin-left: 340px;
+     }
+  aside{
+        margin-right: 7px;
+        width:230px;
+        float:left;
+        padding:0px 0px 0px 20px:
+  }
+  aside section a:hover{
+                       color:#985d6a;
+                       background-color:#efefef:
+                       }
+  aside h2 {
+            padding: 30px 0px 10px 0px;
+            color: #de6581;
+          }
+      aside section a{
+                     display:block;
+                     padding:10px;
+                     border-bottom: 1px solid #eeeeee;
+                     margin-left: 24px;
+
+                      }
+  hgroup{
+
+            margin-top:40px;
+        }

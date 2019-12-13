@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title></title>
+    <style>
+    body{width:100%;
+    height:auto;
+    background-color: #e4e4e4f7;
+  }
+  #ad{
+    width: 200px;
+    height: 230px;
+    position: absolute;
+    top: 208px;
+    left: 582px;
+    border-radius: 40px;font-family:sans-serif;">
+  }
+
+    </style>
+</head>
+<body>
+    <img style="position: absolute;
+    left: 345px;
+    top: -26px;
+    width: 678px;" src="watch.jpg">
+     <nav>
+       <a class="nw"href="smartwatch.html"><button style="position: absolute;left:620px;top:465px; font-size:20px;border-radius: 50%; color: black;border: 1px solid #e4e4e4f7; ">&#9993;</button></a>
+       <a href="msg.html"><button style="position: absolute;left:670px; top:465px; font-size:20px;border-radius: 50%;color: black; border: 1px solid #e4e4e4f7;">&#9835;</button></a>
+       <a href="timer.html"><button style="position: absolute;left:710px; top:465px; font-size:20px;border-radius: 50%;color: black; border: 1px solid #e4e4e4f7;">&#x231A;</button></a>
+     </nav>
+<body>
+  <section id="co">
+<div id="ad" class="w3-content w3-display-container" >
+
+   <p><button style=" border:none;position: absolute;left:5px; top: 20px;" onclick="plusDivs(-1)">&#10094;</button> <b style="font-size: 20px; ">
+       <center>Messages</center></b>
+ <button style=" border:none;position: absolute;left:170px; top: 20px; " onclick="plusDivs(1) ">&#10095;</button>
+     </p>
+    <b> <p class="mySlides"  >India vs bangladesh 2nd t20 on 7 Nov 2019</p>
+     <p class="mySlides" >You have 12 new whatsapp messages</p>
+     <p class="mySlides" >You have 23 new facebook notifications</p>
+     <p class="mySlides" >You have 12 miss calls</p></b>
+</div>
+</section>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+function plusDivs(n) {
+ showDivs(slideIndex += n);
+}
+function showDivs(n) {
+ var i;
+ var x = document.getElementsByClassName("mySlides");
+ if (n > x.length) {slideIndex = 1}
+ if (n < 1) {slideIndex = x.length}
+ for (i = 0; i < x.length; i++) {
+   x[i].style.display = "none";
+ }
+ x[slideIndex-1].style.display = "block";
+}
+</script>
+<script src="sm.js"></script>
+</body>
+</body>
+</html>

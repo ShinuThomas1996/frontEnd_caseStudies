@@ -1,0 +1,114 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+      body{
+        background-image:url("wimg.jpg");
+        background-repeat:no-repeat;
+        background-size:100%,100%;
+        width:100%;
+        height:auto;
+        }
+      #a{
+        background-image:url("w4.jpg");
+        background-repeat:no-repeat;
+
+        width: 483px;
+        height: 622px;
+        position: absolute;
+        left: 437px;
+        top: 10px;
+      }
+      #b{
+      background-color:white;
+      width: 483px;
+      height: 357px;
+      position: absolute;
+      left: 0px;
+      top: 38px;
+      }
+      #c{
+
+        width: 263px;
+        height: 30px;
+        position: absolute;
+        left: 62px;
+        top: 445px;
+      }
+      #d{
+
+        width: 60px;
+        height: 30px;
+        position: absolute;
+        left: 331px;
+        top: 445px;
+      }
+      </style>
+        </head>
+          <body>
+        <!--division starts-->
+             <div id="a">
+              <!--division starts-->
+                <div id="b">
+                   <center>
+                      <h1 style="" id="name" class="name"></h1>
+                      <p id="temp"></p>
+                      <p id="desc"></p>
+
+                      <p id="day"></p>
+                      <p id="date"></p>
+                  </center>
+               </div>
+               <!--division ends-->
+                 <input id="c" placeholder="City,State" type="text">
+                 <input type="button" value="Enter" id="d">
+              </div>
+              <!--division ends-->
+              <!--javascript starts-->
+              <script type="text/javascript">
+                //fetching first value in the id
+                    var input = document.querySelector('#c');
+                    var main = document.querySelector('#name');
+                    var temp = document.querySelector('#temp');
+                    var desc = document.querySelector('#desc');
+
+                    var button= document.querySelector('#d');
+                    var day = document.querySelector('#day');
+                    var date = document.querySelector('#date');
+
+                    var d = new Date();
+
+
+                    button.addEventListener('click', function(name){
+                      //fetching api
+                    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=50a7aa80fa492fa92e874d23ad061374')
+                    .then(response => response.json())
+                    .then(data => {
+                    var tempValue = data['main']['temp'];
+                    var nameValue = data['name'];
+                    var descValue = data['weather'][0]['description'];
+                    main.innerHTML = nameValue;
+
+                    date.innerHTML=d;
+                    var p= Math.trunc (tempValue-273);
+                    desc.innerHTML = "Description - "+descValue;
+                    temp.innerHTML = "Temperature in Celcius : "+p;
+                    input.value ="";
+
+                  })
+                    .catch(err => alert("Wrong city name! Check the Spelling of City"));
+                  })
+                  $(function(){
+                  var place = ["Kottayam","Kochi","Kozhikodu","Mumbai","Chennai","Kannur","Jaipur","Kollam","banglore","kollam","trivandrum"];
+                  $("#c").autocomplete({
+                   source: place
+                  });
+                  });
+            </script>
+            <!--javascript ends-->
+        </body>
+  </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+<head>
+  <style>
+    body{
+      background-color:white;
+
+    }
+    #ty{
+      position: absolute;
+  left: 671px;
+  top: 60px;
+  width: 249px;
+  height: 27px;
+  font-size: 23px;
+  border: none;
+    }
+    .row{
+      width: 348px;
+height: auto;
+margin-left: 635px;
+margin-top: 113px;
+font-size:20px;
+    }
+    li:hover{
+    text-decoration: line-through;
+    }
+    </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      $("#ty").dblclick(function(){
+
+        var e=$("#ty").val();
+        $("#a").append("<li>"+e+"</li>");
+        $("#ty").val("");
+
+    $('li').dblclick(function(){
+      $(this).hide();
+    });
+
+    });
+
+  });
+
+
+      </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+    <input id="ty" type="text" placeholder="what need to be done?"/>
+    <ul id="a">
+
+      </ul>
+      </div>
+    </div>
+    </body>
+</html>

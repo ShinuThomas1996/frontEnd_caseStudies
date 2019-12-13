@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title></title>
+    <style>
+    body{
+      width:100%;
+    height:auto;
+    background-color: #e4e4e4f7;
+  }
+  #ad{
+    width: 200px;
+    height: 230px;
+    position: absolute;
+    top: 208px;
+    left: 582px;
+    border-radius: 40px;font-family:sans-serif;">
+  }
+  </style>
+</head>
+<body>
+    <img style="position: absolute;  left: 345px;
+    top: -26px;
+    width: 678px;" src="watch.jpg">
+     <nav>
+       <a class="nw" href="smartwatch.html"><button style="position: absolute;left:620px;top:465px; font-size:20px;border-radius: 50%; color: black;border: 1px solid #e4e4e4f7; ">&#9993;</button></a>
+       <a href="msg.html"><button style="position: absolute;left:670px; top:465px; font-size:20px;border-radius: 50%;color: black; border: 1px solid #e4e4e4f7;">&#9835;</button></a>
+       <a href="timer.html"><button style="position: absolute;left:710px; top:465px; font-size:20px;border-radius: 50%;color: black; border: 1px solid #e4e4e4f7;">&#x231A;</button></a>
+     </nav>
+     <b style="    position: absolute;
+    left: 640px;
+    top: 221px;    font-size: 20px;">Stopwatch</b>
+<body onload="show();">
+    <div> <p id="time"style="top: 284px; left: 635px;position: absolute;"></p></div>
+    <input type="button" value="start" onclick="start();"style="top: 384px; left: 603px;position: absolute;border-radius: 50% color:blue;background-color:gray;border-radius:6px;">
+    <input type="button" value="stop" onclick="stop();"style="top: 384px; left: 660px;position: absolute;border-radius: 50%color:blue;background-color:gray;border-radius:6px;">
+    <input type="button" value="reset" onclick="reset()"style="top: 384px; left: 710px;position: absolute;border-radius: 50%color:blue;background-color:gray;border-radius:6px;">
+</body>
+<script>
+    var    clsStopwatch = function() {
+
+        var    startAt    = 0;
+        var    lapTime    = 0;
+        var    now    = function() {
+                return (new Date()).getTime();
+            };
+
+        this.start = function() {
+                startAt    = startAt ? startAt : now();
+            };
+
+        this.stop = function() {
+
+                lapTime    = startAt ? lapTime + now() - startAt : lapTime;
+                startAt    = 0;
+            };
+
+        this.reset = function() {
+                lapTime = startAt = 0;
+            };
+
+        this.time = function() {
+                return lapTime + (startAt ? now() - startAt : 0);
+            };
+    };
+var x = new clsStopwatch();
+var $time;
+var clocktimer;
+function pad(num, size) {
+    var s = "0000" + num;
+    return s.substr(s.length - size);
+}
+function formatTime(time) {
+    var h = m = s = ms = 0;
+    var newTime = '';
+    h = Math.floor( time / (60 * 60 * 1000) );
+    time = time % (60 * 60 * 1000);
+    m = Math.floor( time / (60 * 1000) );
+    time = time % (60 * 1000);
+    s = Math.floor( time / 1000 );
+    ms = time % 1000;
+    newTime = pad(h, 2) + ':' + pad(m, 2) + ':' + pad(s, 2) + ':' + pad(ms, 3);
+    return newTime;
+}
+function show() {
+    $time = document.getElementById('time');
+    update();
+}
+function update() {
+    $time.innerHTML = formatTime(x.time());
+}
+function start() {
+    clocktimer = setInterval("update()", 1);
+    x.start();
+}
+function stop() {
+    x.stop();
+    clearInterval(clocktimer);
+}
+function reset() {
+    stop();
+    x.reset();
+    update();
+}</script>
+           </html>

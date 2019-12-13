@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>
+    Sign in
+    </title>
+    <!--linking the css file-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <script type="text/javascript">
+function checklogin() {
+ var username=["albin","roman","john"];
+ var passw = ["qwerty","12345","asdfgh"];
+ var user=  document.getElementById('us').value;
+ var pass=  document.getElementById('ps').value;
+ var x=username.indexOf(user);
+ var y=passw.indexOf(pass);
+ if(x==y && x>=0 && y>=0 )
+ {
+   window.alert("Login Sucessfull");
+ }
+ else
+ {
+       window.alert("Login Un-Sucessfull");
+ }
+}
+</script>
+
+
+    <style>
+    body{
+      background: url(https://wallpapercave.com/wp/wp2562825.jpg);
+      background-repeat:no-repeat;
+      background-size:100%,100%;
+      font-family:'Ubuntu',sans-serif;
+    }
+
+.main{
+      margin-top: 19%;
+      width:55%;
+      height:50%;
+     }
+
+.fm{
+     background-color: white;
+     height: 60%;
+     width: 42%;
+     padding: 2%;
+     color: #8C55AA;
+     font-family: 'Ubuntu',sans-serif;
+     font-weight: bold;
+     font-size: 15px;
+     border-radius: 73px;
+  }
+
+.login{
+        color:#d925e4;
+        align:center;
+      }
+
+#us{
+      width: 70%;
+      padding: inherit;
+      color: rgb(38,50,56);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      border-sizing: border-box;
+      border: 2px solid rgb(210, 197, 197);
+      text-align: center;
+      border-radius: 12px;
+}
+
+#ps{
+     width: 70%;
+     padding: inherit;
+     color: rgb(38,50,56);
+     font-weight: 700;
+     font-size: 14px;
+     letter-spacing: 1px;
+     border-sizing: border-box;
+     border: 2px solid rgb(210, 197, 197);
+     text-align: center;
+     border-radius: 12px;
+   }
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+
+.sub{
+    cursor: pointer;
+    color:white;
+    border-radius: 10px;
+    background-color:#d925e4;
+    height: 27px;
+    width: 118px;
+    background: linear-gradient(to right,#8e8787,#d925e4);
+  }
+
+.sub:hover{
+
+            background-image: none! important;
+          background-color: red;
+        }
+    </style>
+  </head>
+  <body><center>
+    <!--division tag starts-->
+      <div class="main">
+        <!--form tag starts-->
+      <form class="fm">
+
+      <h1 class="login">Sign in</h1>
+      <input id="us" type="text" name="username" onblur="checkbox()" placeholder="Username" required="required"/>
+      <br><br>
+      <div id="feedback">
+      </div>
+      <input id="ps" type="password" name="password" placeholder="Password" required="required"/>
+      <br>
+      <br>
+      <input class="sub" onclick="checklogin()" type="submit" value="Submit"/>
+      <p class="fr"><a href="https://www.google.com/search?q=google&rlz=1C1OKWM_enIN852IN869&oq=google&aqs=chrome..69i60j69i57j0j69i59j69i60l2.25058j0j7&sourceid=chrome&ie=UTF-8">Forgot Password?</a></p>
+    </form>
+    <!--form tag ends-->
+    </div>
+    <!--division tag ends-->
+    </center>
+
+  </body>
+  <script>
+  function checkbox(){
+  var e=document.getElementById('feedback');
+  var el=document.getElementById('us');
+  if(el.value.length<5){
+    e.textContent='Username must be 5 character or more';
+  }
+  else{
+    e.textContent='';
+  }
+}
+  </script>
+</html>

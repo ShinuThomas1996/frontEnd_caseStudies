@@ -1,0 +1,349 @@
+<!DOCTYPE>
+<HTML>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body{
+  background-color:orange;
+}
+.m{
+
+      background-color: lightblue;
+      border-radius: 51px;
+      width: 321px;
+      height: 538px;
+      position: absolute;
+      top: 51px;
+      left: 575px;
+}
+#a{
+  text-align: center;
+height: 27px;
+width: 178px;
+margin-left: 28px;
+margin-top: 29px;
+}
+}
+#f{
+
+}
+#s{
+margin-top: 47px;
+margin-left: 80px;
+}
+#b{
+  text-align: center;
+  position: absolute;
+  top: 469px;
+  left: 130px;
+}
+#d{
+  height: 20px;
+    width: 153px;
+
+    text-align: center;
+    position: absolute;
+    top: 141px;
+    left: 40px;
+}
+#t{
+  position: absolute;
+    top: 149px;
+    left: 79px;
+}
+#u{
+  position: absolute;
+top: 213px;
+left: 79px;
+}
+#w{
+  position: absolute;
+      top: 285px;
+      left: 88px;
+}
+#i{
+  position: absolute;
+  top: 364px;
+  left: 66px;
+}
+#text{
+  position: absolute;
+  top: 394px;
+  left: 75px;
+
+}
+#fs{
+
+
+    height: 27px;
+    width: 215px;
+    margin-left: 80px;
+    margin-top: -66px;
+
+
+}
+#se{
+
+    height: 27px;
+    width: 214px;
+    margin-left: 80px;
+    margin-top: 42px;
+
+}
+#th{
+
+    height: 41px;
+    width: 215px;
+    position: absolute;
+    left: 80px;
+    top: 172px;
+}
+#fr{
+
+    height: 27px;
+    width: 214px;
+    position: absolute;
+    left: 80px;
+    top: 236px;
+}
+#ft{
+
+      height: 66px;
+      width: 212px;
+      position: absolute;
+      left: 80px;
+      top: 305px;
+}
+#im{
+  height: 14px;
+      position: absolute;
+      left: 232px;
+      top: 154px;
+      display:none;
+}
+#img{
+  height: 14px;
+      position: absolute;
+      left: 234px;
+      top: 154px;
+      display:none;
+}
+#imm{
+  height: 13px;
+      position: absolute;
+      left: 234px;
+      top: 217px;
+      display:none;
+}
+#imgg{
+  height: 14px;
+      position: absolute;
+      left: 235px;
+      top: 216px;
+      display:none;
+
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <centre>
+    <div class="m">
+    <input style="margin-top: 20px;margin-left: 80px;" id="f" type="text" placeholder="Name"/>
+    <input id="s" type="email" placeholder="Email"/>
+    <input id="t"  type="password"  placeholder="Password"/>
+    <img src="se.jpg" id="im"/>
+    <img src="fs.jpg" id="img"/>
+
+    <input id="u" type="password" placeholder="Confirm password"/>
+    <img src="se.jpg" id="imm"/>
+    <img src="fs.jpg" id="imgg"/>
+    <input id="w" type="date" />
+    <p id="i">Short bio(max 140 characters)</p>
+    <textarea id="text" maxlength="140"></textarea>
+
+    <input id="b" type="button" onclick="fn()"value="submit"/>
+<div id="fs"></div>
+<span id="aa" style="position: absolute;
+    top: 52px;
+    left: 61px;display:none" class="glyphicon glyphicon-warning-sign"></span>
+  <div id="se"></div>
+<span id="aaa" style="position: absolute;
+    top: 121px;
+    left: 61px;display:none" class="glyphicon glyphicon-warning-sign"></span>
+    <div id="th"></div>
+<span id="aaaa" style="position: absolute;
+    top: 178px;
+    left: 61px;display:none" class="glyphicon glyphicon-warning-sign"></span>
+      <div id="fr"></div>
+<span id="aaaaa" style="position: absolute;
+    top: 242px;
+    left: 61px;display:none" class="glyphicon glyphicon-warning-sign"></span>
+        <div id="ft">
+
+        </div>
+<p id="no" class="num"  style="     position: absolute;
+    top: 440px;
+    left: 81px;
+
+  "></p>
+          </div>
+  </centre>
+  </div>
+  <script>
+  var z1=0,z2=0,z3=0,z4=0,z5=0,z6=0,z7=0,z8=0,z9=0,z10=0;
+  function fn(){
+var l=document.getElementById("f").value;
+var le=l.length;
+if(le<1)
+{var x = document.getElementById("aa");
+  if (window.getComputedStyle(x).display === "none") {
+    x.style.display = "block";
+  }
+  document.getElementById("fs").innerHTML = 'Field is required';
+}
+else{
+  z1=1;
+}
+
+if((s.value.includes("@"))&&(s.value.includes(".")))
+{
+z2=1;
+}
+else{
+  var x = document.getElementById("aaa");
+  if (window.getComputedStyle(x).display === "none") {
+    x.style.display = "block";
+  }
+document.getElementById("se").innerHTML = 'Please enter valid email';
+}
+var ll=document.getElementById("t").value;
+var  len=ll.length;
+if(len<6)
+{var x = document.getElementById("aaaa");
+  if (window.getComputedStyle(x).display === "none") {
+    x.style.display = "block";
+  }
+    document.getElementById("th").innerHTML = 'please make sure that your password has 8 characters';
+}
+else{
+  z3=1;
+}
+var lll=document.getElementById("u").value;
+var leng=lll.length;
+if(leng<1)
+{var x = document.getElementById("aaaaa");
+  if (window.getComputedStyle(x).display === "none") {
+    x.style.display = "block";
+  }
+  var xx = document.getElementById("imgg");
+    if (window.getComputedStyle(xx).display === "none") {
+      xx.style.display = "block";
+    }
+  document.getElementById("fr").innerHTML = 'Field is required';
+}
+else{
+  z4=1;
+}
+var s2=document.getElementById("w").value;
+var s1=new Date(s2);
+var r1=new Date();
+var q1=r1.getFullYear()
+
+var p1=s1.getFullYear();
+ p1=q1-p1;
+if(p1<18)
+{
+document.getElementById("ft").innerHTML="You need a parent's permission to join.Tick here if your child can join: "+'<input id="check" type="checkbox">';
+}
+else {
+  z5=1;
+document.getElementById("ft").innerHTML='';
+
+}}
+document.getElementById("text").onkeyup = function () {
+document.getElementById("no").innerHTML =  (140 - this.value.length);
+};
+  </script>
+
+
+<script>
+$(document).ready(function(){
+  $("#t").blur(function(){
+  var at=document.getElementById("t").value;
+  var att=at.length;
+  if(att<6)
+  {
+    var xxw = document.getElementById("img");
+      if (window.getComputedStyle(xxw).display === "none") {
+        xxw.style.display = "block";
+      }
+
+document.getElementById("th").innerHTML = 'please make sure that your password has 8 characters';
+
+  }
+  else{
+    z6=1;
+    var xxw = document.getElementById("im");
+      if (window.getComputedStyle(xxw).display === "none") {
+        xxw.style.display = "block";
+      }
+
+
+  }
+  });
+});
+
+
+  </script>
+  <script>
+
+
+  $(document).ready(function(){
+    $("#u").blur(function(){
+    var att=document.getElementById("u").value;
+    var at=document.getElementById("t").value;
+    if(att==at){
+      z7=1;
+      var xxw = document.getElementById("imm");
+        if (window.getComputedStyle(xxw).display === "none") {
+          xxw.style.display = "block";
+
+}
+
+    }
+    else{
+      var xxw = document.getElementById("imgg");
+        if (window.getComputedStyle(xxw).display === "none") {
+          xxw.style.display = "block";
+
+document.getElementById("fr").innerHTML = 'Passwords are different';
+
+
+}}
+  });
+    $("#f").blur(function(){
+  var l=document.getElementById("f").value;
+  var le=l.length;
+  if(le<1)
+  {var x = document.getElementById("aa");
+    if (window.getComputedStyle(x).display === "none") {
+      x.style.display = "block";
+    }
+    document.getElementById("fs").innerHTML = 'Field is required';
+  }
+  else{
+    var x = document.getElementById("aa");
+      if (window.getComputedStyle(x).display === "block") {
+        x.style.display = "none";
+      }
+      document.getElementById("fs").innerHTML = '';
+  }
+});
+  });
+  </script>
+</body>
+</html>
