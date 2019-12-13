@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 5: Document Object Model - Child</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/c05.css">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <div style="    position: absolute;
+    left: 561px;
+    top: 183px;
+    height: ;
+    height: 19px;
+    width: 478px;
+text-align:center;"id="p"></div>
+      <!-- note that we need to close the whitespace for the example to work in Safari -->
+      <ul>
+      <h3 Style="padding-left:193px">Username</h3><br>
+      <input style="    border-radius: 6px;
+    width: auto;
+    height: auto;
+    margin-left: 139px;
+
+    position-absolute: top:-19px;
+    position: absolute;
+    top: 239px;
+    text-align: center;" id="us" type="text" onkeyup="pr()" placeholder="username" required="required"/>
+
+      </ul>
+    </div>
+    <script>
+
+function pr(){
+var  e=document.getElementById('p');
+var  el=document.getElementById('us');
+var ch=el.value;
+e.textContent=ch;
+}
+
+    </script>
+  </body>
+</html>

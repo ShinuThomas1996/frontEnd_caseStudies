@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+    textarea{
+      overflow-y:scroll;
+      overflow-x:scroll;
+    }
+    .l{
+      width:100%;
+      height:auto;
+      position:absolute;
+      top:317px;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#fs").keyup(function(){
+          $("#last").html($(this).val());
+        });
+      });
+      </script>
+      <script>
+      function compile() {
+
+      	var html = document.getElementById("html");
+      	var css = document.getElementById("css");
+      	var js = document.getElementById("js");
+      	var code = document.getElementById("code").contentWindow.document;
+
+      	 document.body.onkeyup = function(){
+      	    code.open();
+      		code.writeln(html.value+"<style>"+css.value+"</style>"+"<script>" + js.value);
+      		code.close();
+            };
+          };
+
+      compile();
+      </script>
+  </head>
+  <body>
+    <div style="border-bottom:2px solid black;">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <textarea id="fs" placeholder="HTML" class="col-sm-12 col-md-4 col-lg-4" name="name" rows="4" cols="60" style="width:504px;height:291px;"></textarea>
+      </div>
+      <div class="col-sm-12 col-md-4 col-lg-4" style="position: absolute;
+    left: 505px;
+    top: 8px;">
+        <textarea id="se" placeholder="CSS" class="col-sm-12 col-md-4 col-lg-4" name="name" rows="4" cols="60"style="width:500px;height:291px;margin-left: 28px;"></textarea>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4" style="position: absolute;
+    left: 1080px;
+    top: 9px;">
+          <textarea id="la" placeholder="jQUERY" class="col-sm-12 col-md-4 col-lg-4" name="name" rows="4" cols="60"style="width:500px;height:291px;margin-left: -26px;"></textarea>
+          </div>
+</div>
+
+            <div class="l" id="last">
+              </div>
+    </body>
+</html>
